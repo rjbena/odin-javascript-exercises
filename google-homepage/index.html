@@ -1,7 +1,85 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            body {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: stretch;
+                font-size: small;
+                background: #fff;
+                color: #222;
+                font-family: arial, sans-serif;
+            }
+            ul {
+                list-style: none;
+            }
+            header {
+                background-color: lightblue;
+                display: flex;
+                width: 100%;
+                margin: 0;
+                padding: 3px;
+                justify-content: space-between;
+            } 
+            header li {
+                margin: 5px;
+            }
+            .left-header {
+                display: flex;
+                
+            }
+            .right-header {
+                display: flex;
+            }
+            img {
+                padding: 0px;
+                margin-bottom: 15px;
+                width: 300px;
+               
 
+            }
+
+            .main {
+                display: flex;
+                flex-flow: column wrap;
+                padding: 380px;
+                background-color: lightcoral;
+                width: 100%;
+
+            }
+            .google {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            input {
+                width: 350px;
+                height: 40px;
+                border-radius: 20px;
+                margin-bottom: 18px ;
+            }
+           footer {
+               background-color: lightgreen;
+               display: flex;
+               position:fixed;
+               bottom: 0px;
+               left: 0px;
+               width: 100%
+           }
+           footer li {
+               margin: 5px;
+           }
+           .left-footer{
+               display: flex;
+           }
+           .right-footer {
+               display: flex;
+               margin-left: auto;
+           }
+           
+        </style>
     </head>
     <body class="body">
         <header class="google-header">
@@ -16,14 +94,18 @@
                 <li><button>Sign In</button></li>
             </ul>
         </header>
-        <section class="google">
-            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
-            <form action="#" class="search-form">
-                <input type="search" >
-                <button class="google-search">Google Search</button>
-                <button class="lucky">I'm Feeling Lucky</button>
-            </form>
-        </section>
+        <div class="main">
+            <section class="google">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
+                <form action="#" class="search-form">
+                    <input type="search" >
+                    <div class="main-buttons">
+                        <button class="google-search">Google Search</button>
+                        <button class="lucky">I'm Feeling Lucky</button>
+                    </div>
+                </form>
+            </section>
+        </div>
         <footer class="google-footer">
             <ul class="left-footer">
                 <li>Advertising</li>

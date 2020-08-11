@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function Practice</title>
+</head>
+<body>
+
+  <script>
+    const add7 = (number =0) => number +7;
+    console.log(add7(20));
+    const multiply = (n1 =1,n2 =1) => n1 * n2;
+    console.log(multiply(20, 3));
+    const capitalize =(string ='') => {
+        let result = string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+        return result;
+    }
+    console.log(capitalize("freddy"));
+    console.log(capitalize("DIEGO ID A DUNCE"));
+    console.log(capitalize("vitD hfdDFfg fJJdffs"));
+    const lastLetter =(string) => {
+        let result = string.slice(-1);
+        return result;
+    }
+    console.log(lastLetter('abcd'));
+  </script>
+</body>
+</html>
