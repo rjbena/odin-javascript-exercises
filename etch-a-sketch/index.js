@@ -31,6 +31,14 @@ const editGrid = () => {
        square.setAttribute("style","background-color:white;");
     });
     let dim = prompt("Enter new grid dimensions");
+    dim = parseInt(dim);
+   
+    while(!dim )
+    {
+       
+        dim = prompt("Enter new grid dimensions");
+        dim = parseInt(dim);
+    }
     const grid = document.querySelector(".grid");
     while (grid.firstChild) {
         grid.firstChild.remove();
