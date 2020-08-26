@@ -1,7 +1,7 @@
 let num1 = "";
 let num2 ="";
 let operand ="";
-
+let isFLoat = false;
 const add = (a,b) => {
     return a + b;
 }
@@ -39,6 +39,7 @@ const operate = () => {
         const dis = document.querySelector("input");
         num2 ="";
         operand = "";
+        isFLoat = false;
         console.log(result);
         if(result < 0) {
             num1 = Math.abs(result);
@@ -53,6 +54,7 @@ const operate = () => {
 
 }
 const setOperand = (op) => {
+    isFLoat =false;
     if (num2) {
         operate();
     }
@@ -60,6 +62,14 @@ const setOperand = (op) => {
 }
 const display = (num) => {
     const dis = document.querySelector("input");
+    if (num === '.'){
+        if (!isFLoat) {
+            isFLoat = true;
+        } else {
+            return;
+        }
+    }
+   
     if (!num1 || !operand){
         if (typeof num1 === "number"){
             num1="";
